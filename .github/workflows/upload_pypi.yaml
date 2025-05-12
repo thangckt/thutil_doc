@@ -6,10 +6,6 @@ name: Upload wheel file to PyPI
 on:
   push:
     branches: [main, build_wheel]
-    # tags: ["v*", dev*]
-  # pull_request:
-  release:
-    types: [created]
 
 jobs:
   upload_pypi:
@@ -24,8 +20,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup python
-        uses: actions/setup-python@v5
+      # - name: Setup python
+      #   uses: actions/setup-python@v5
 
       - uses: pypa/gh-action-pypi-publish@release/v1
         # with:
