@@ -3845,10 +3845,11 @@ filename (Union[str, Path]): The filename to load data from, whose suffix should
     <div class="doc doc-contents ">
 
         <p>Function to submit a jobs to the remote machine. The function will:</p>
-<div class="codehilite"><pre><span></span><code><span class="o">-</span><span class="w"> </span><span class="n">Prepare</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">task</span><span class="w"> </span><span class="n">list</span>
-<span class="o">-</span><span class="w"> </span><span class="n">Make</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">submission</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">jobs</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="k">remote</span><span class="w"> </span><span class="n">machines</span>
-<span class="o">-</span><span class="w"> </span><span class="n">Wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">jobs</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">finish</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">download</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">results</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">local</span><span class="w"> </span><span class="n">machine</span>
-</code></pre></div>
+<ul>
+<li>Prepare the task list</li>
+<li>Make the submission of jobs to remote machines</li>
+<li>Wait for the jobs to finish and download the results to the local machine</li>
+</ul>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -3910,10 +3911,15 @@ filename (Union[str, Path]): The filename to load data from, whose suffix should
           </div>
         </li>
     </ul>
-        <p>Note:
-- Split the <code>task_list</code> into chunks to control the number of jobs submitted at once.
-- Should not use the <code>Local</code> contexts, it will interference the current shell environment which leads to the unexpected behavior on local machine. Instead, use another account to connect local machine with <code>SSH</code> context.</p>
 
+
+<details class="note" open>
+  <summary>Note</summary>
+  <ul>
+<li>Split the <code>task_list</code> into chunks to control the number of jobs submitted at once.</li>
+<li>Should not use the <code>Local</code> contexts, it will interference the current shell environment which leads to the unexpected behavior on local machine. Instead, use another account to connect local machine with <code>SSH</code> context.</li>
+</ul>
+</details>
 
     </div>
 
