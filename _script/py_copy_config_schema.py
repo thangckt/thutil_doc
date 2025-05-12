@@ -30,10 +30,10 @@ def main():
         text_file="./_docs/schema_doc/config_remote_machine.md",
     )
     ### Append example configuration to the .md files
-    # append_example_config(
-    #     yaml_config_file="./thutil/schema/example_param_active_learn.yml",
-    #     text_file="./_docs/schema/config_active_learning.md",
-    # )
+    append_example_config(
+        yaml_config_file="./thutil/schema/example_machine_config.yml",
+        text_file="./_docs/schema_doc/config_remote_machine.md",
+    )
     return
 
 
