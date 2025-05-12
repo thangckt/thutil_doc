@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#schema-to-configure-the-remote-machines" class="md-skip">
+        <a href="#schema-to-configure-remote-machines" class="md-skip">
           Skip to content
         </a>
       
@@ -1246,10 +1246,12 @@
 
 
 
-<h1 id="schema-to-configure-the-remote-machines">Schema to configure the remote machines<a class="headerlink" href="#schema-to-configure-the-remote-machines" title="Permanent link">&para;</a></h1>
-<p>In the below schema, the <a href="https://docs.deepmodeling.com/projects/dpdispatcher/en/latest/machine.html"><code>machine</code></a> and <a href="https://docs.deepmodeling.com/projects/dpdispatcher/en/latest/resources.html"><code>resources</code></a> dicts accept all keywords as in the <a href="https://docs.deepmodeling.com/projects/dpdispatcher">dpdispatcher</a> package
-- Support romote machines of various <a href="https://docs.deepmodeling.com/projects/dpdispatcher/en/latest/batch.html">batch types</a>: 'Bash' 'Slurm', 'OpenPBS', 'SGE', 'TORQUE', 'LSF', 'OpenAPI', ...
-- Support various connection <a href="https://docs.deepmodeling.com/projects/dpdispatcher/en/latest/context.html">contexts</a>: 'Local', 'SSH', 'HDFS', 'OpenAPI', ...</p>
+<h1 id="schema-to-configure-remote-machines">Schema to configure remote machines<a class="headerlink" href="#schema-to-configure-remote-machines" title="Permanent link">&para;</a></h1>
+<p>In the below schema, the <a href="https://docs.deepmodeling.com/projects/dpdispatcher/en/latest/machine.html"><code>machine</code></a> and <a href="https://docs.deepmodeling.com/projects/dpdispatcher/en/latest/resources.html"><code>resources</code></a> dicts accept all keywords as in the <a href="https://docs.deepmodeling.com/projects/dpdispatcher">dpdispatcher</a> package</p>
+<ul>
+<li>Support romote machines of various <a href="https://docs.deepmodeling.com/projects/dpdispatcher/en/latest/batch.html">batch types</a>: 'Bash' 'Slurm', 'OpenPBS', 'SGE', 'TORQUE', 'LSF', 'OpenAPI', ...</li>
+<li>Support various connection <a href="https://docs.deepmodeling.com/projects/dpdispatcher/en/latest/context.html">contexts</a>: 'Local', 'SSH', 'HDFS', 'OpenAPI', ...</li>
+</ul>
 <h2 id="schema">Schema:<a class="headerlink" href="#schema" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">### The `machine` and `resources` dicts accept all keywords as in the dpdispatcher package</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="c1"># machine dict: https://docs.deepmodeling.com/projects/dpdispatcher/en/latest/machine.html</span>
