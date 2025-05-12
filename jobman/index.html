@@ -1358,6 +1358,7 @@
 
         <p><code>jobman</code> is a job manager package is designed to submit and monitor jobs on remote machines. It is built on the top of the <a href="https://docs.deepmodeling.com/projects/dpdispatcher">dpdispatcher</a> package.</p>
 <p><code>jobman</code> is designed for the big data era, where the number of remoted jobs is large that handling them manually is almost impossible. Imaging that you have more than 1000 jobs to run, you have access to 3 remote high-performance computing (HPC) serves with different computing environment, and you need to monitor the progress of each job, check the output files, and download the results. This is a tedious and time-consuming task. The <code>jobman</code> package is designed to automate such tasks. <code>jobman</code> will handle the input files, submit the jobs to remote machines, monitor the progress of each job, and download the results to the local machine whenever jobs finished.</p>
+<p>For general purpose, just need to use either <a href="#thutil.jobman--submit_job_chunk">submit_job_chunk()</a> or <a href="#thutil.jobman--async_submit_job_chunk">async_submit_job_chunk()</a> to submit jobs to remote machines. Setting remote machines follow the <a href="https://thangckt.github.io/thutil_doc/schema_doc/config_remote_machine/">remote machine schema</a>.</p>
 
 
 
@@ -1498,7 +1499,7 @@
               (<code><span title="list">list</span>[<span title="dpdispatcher.Task">Task</span>]</code>)
           –
           <div class="doc-md-description">
-            <p>a list of Task objects. Each task object contains the command to be executed on the remote machine, and the files to be copied to and from the remote machine. The dirs of each task must be relative to the <code>work_dir</code>.</p>
+            <p>a list of <a href="https://docs.deepmodeling.com/projects/dpdispatcher/en/latest/task.html">Task</a> objects. Each task object contains the command to be executed on the remote machine, and the files to be copied to and from the remote machine. The dirs of each task must be relative to the <code>work_dir</code>.</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
