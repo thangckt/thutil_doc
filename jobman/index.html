@@ -1360,7 +1360,7 @@
 <p><code>jobman</code> is designed for the big data era, where the number of remoted jobs is large that handling them manually is almost impossible. Imaging that you have more than 1000 jobs to run, you have access to 3 remote high-performance computing (HPC) serves with different computing environment, and you need to monitor the progress of each job, check the output files, and download the results. This is a tedious and time-consuming task. The <code>jobman</code> package is designed to automate such tasks. <code>jobman</code> will handle the input files, submit the jobs to remote machines, monitor the progress of each job, and download the results to the local machine whenever jobs finished.</p>
 <p>For general purpose usage:</p>
 <ul>
-<li>Just need to use function <a href="#thutil.jobman--thutil.jobman.submit_job_chunk">submit_job_chunk()</a> to submit jobs to remote machines.</li>
+<li>Just need to use function <a href="#submit_job_chunk">submit_job_chunk()</a> to submit jobs to remote machines.</li>
 <li>Define the <code>task_list</code> as a list of <a href="https://docs.deepmodeling.com/projects/dpdispatcher/en/latest/task.html">Task</a> objects.</li>
 <li>Setting remote machines follow the <a href="https://thangckt.github.io/thutil_doc/schema_doc/config_remote_machine/">remote machine schema</a>.</li>
 </ul>
