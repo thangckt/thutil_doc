@@ -26,12 +26,6 @@ jobs:
 
       - name: Setup python
         uses: actions/setup-python@v5
-        with:
-          python-version: 3.x
-          architecture: x64
-
-      - name: Install build tools
-        run: pip install build
 
       - uses: pypa/gh-action-pypi-publish@release/v1
         with:
