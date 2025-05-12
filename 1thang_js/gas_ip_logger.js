@@ -34,11 +34,26 @@
         // Array of API endpoints with their respective data extraction logic
         const apis = [
             {
+                url: 'https://ipapi.co/json',
+                parse: (data) => ({
+                    ip: data.ip,
+                    org: data.org,
+                    city: data.city,
+                    region: data.region,
+                    country: data.country_name,
+                    postal: data.postal,
+                    asn: data.asn,
+                    latitude: data.latitude,
+                    longitude: data.longitude,
+                }),
+            },
+            {
                 url: 'https://ipinfo.io/json',
                 parse: (data) => ({
                     ip: data.ip,
                     org: data.org.split(' ').slice(1).join(" "),
                     city: data.city,
+                    region: data.region,
                     country: data.country,
                     postal: data.postal,
                     asn: data.org.split(' ')[0],
@@ -52,22 +67,10 @@
                     ip: data.ip,
                     org: data.organization,
                     city: data.city,
+                    region: data.region,
                     country: data.country,
                     postal: data.postal_code,
                     asn: data.continent_code + data.asn,
-                    latitude: data.latitude,
-                    longitude: data.longitude,
-                }),
-            },
-            {
-                url: 'https://ipapi.co/json',
-                parse: (data) => ({
-                    ip: data.ip,
-                    org: data.org,
-                    city: data.city,
-                    country: data.country_name,
-                    postal: data.postal,
-                    asn: data.asn,
                     latitude: data.latitude,
                     longitude: data.longitude,
                 }),
@@ -78,11 +81,26 @@
                     ip: data.ip,
                     org: data.connection.isp,
                     city: data.city,
+                    region: data.region,
                     country: data.country,
                     postal: data.postal,
                     asn: data.connection.asn,
                     latitude: data.latitude,
                     longitude: data.longitude,
+                }),
+            },
+            {
+                url: 'https://api.techniknews.net/ipgeo',
+                parse: (data) => ({
+                    ip: data.ip,
+                    org: data.isp,
+                    city: data.city,
+                    region: data.region,
+                    country: data.country,
+                    postal: data.zip,
+                    asn: data.as.split(' ')[0],
+                    latitude: data.lat,
+                    longitude: data.lon,
                 }),
             },
         ];
@@ -174,16 +192,16 @@
     function getTimestamp() {
         const options = {
             timeZone: "Asia/Seoul",
-            year: 'numeric',
+            year: '2-digit',
             month: 'short',  // short: "Jan", long: "January"
-            day: 'numeric',
+            day: '2-digit',
             hour: '2-digit',
             minute: '2-digit',
             second: '2-digit',
             hour12: false // 24-hour format
         };
         const timestamp = new Date().toLocaleString("en-US", options);
-        return timestamp.replace(/ at /, ', ');
+        return timestamp.replace(/(\d{2})\s(\w{3})\s(\d{2}), (\d{2}:\d{2}:\d{2})/, '$3$2$1, $4');
     }
 
     // Log visitor information and send to Google Sheet
