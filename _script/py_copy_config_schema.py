@@ -27,7 +27,7 @@ def main():
     ### Append schema to the .md files
     append_schema_text(
         yaml_schema_file="./thutil/schema/schema_arg_remote_machine.yml",
-        text_file="./_docs/schema/config_remote_machine.md",
+        text_file="./_docs/schema_doc/config_remote_machine.md",
     )
     ### Append example configuration to the .md files
     # append_example_config(
