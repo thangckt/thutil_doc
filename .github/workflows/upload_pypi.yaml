@@ -33,11 +33,8 @@ jobs:
       - name: Install build tools
         run: pip install build
 
-      - name: Build wheel
-        run: python -m build --wheel
-
       - uses: pypa/gh-action-pypi-publish@release/v1
         with:
           # To test: repository-url: https://test.pypi.org/legacy/
           # verbose: true
-          path: dist/
+          # path: dist/
