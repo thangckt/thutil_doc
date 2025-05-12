@@ -20,9 +20,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # - name: Setup python
-      #   uses: actions/setup-python@v5
-
       - uses: pypa/gh-action-pypi-publish@release/v1
         # with:
           # To test: repository-url: https://test.pypi.org/legacy/
