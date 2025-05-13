@@ -1341,9 +1341,7 @@
         <p><code>jobman</code> is a job management package is designed to submit and monitor jobs on remote machines. It is built on the top of the <a href="https://docs.deepmodeling.com/projects/dpdispatcher">dpdispatcher</a> package.</p>
 <p><code>jobman</code> is designed for the big data era, where the number of remoted jobs is large that handling them manually is almost impossible. Imaging that you have more than 1000 jobs to run, you have access to 3 remote high-performance computing (HPC) serves with different computing environment, and you need to monitor the progress of each job, check the output files, and download the results. This is a tedious and time-consuming task. The <code>jobman</code> package is designed to automate such tasks. <code>jobman</code> will handle the input files, submit the jobs to remote machines, monitor the progress of each job, and download the results to the local machine whenever jobs finished.</p>
 <p>Setting remote machines follow the <a href="https://thangckt.github.io/thutil_doc/schema_doc/config_remote_machine/">remote machine schema</a>.</p>
-<ol>
-<li>Distribute jobs to single remote machines</li>
-</ol>
+<p>Case 1: Distribute jobs to single remote machines</p>
 <p>This is used for general purpose, which can define the task_list flexibly where each task can have different command_list, forward_files, backward_files. Just need to:</p>
 <ul>
 <li>Define the <code>task_list</code> as a list of <a href="https://docs.deepmodeling.com/projects/dpdispatcher/en/latest/task.html">Task</a> objects.</li>
@@ -1362,9 +1360,7 @@
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="n">backward_common_files</span><span class="o">=</span><span class="n">backward_common_files</span><span class="p">,</span>
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">)</span>
 </code></pre></div>
-<ol>
-<li>Distribute jobs to multiple remote machines</li>
-</ol>
+<p>Case 2: Distribute jobs to multiple remote machines</p>
 <p>This is used for specific purpose (e.g., <code>alff</code> package), where the jobs have the same forward_files, backward_files; but the command_list can be different based on computing environment on each remote machine. Just need to:</p>
 <ul>
 <li>Prepare the <code>task_dirs</code>, where all of them have the same forward_files, backward_files.</li>
