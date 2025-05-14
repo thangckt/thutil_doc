@@ -3230,7 +3230,6 @@ filename (Union[str, Path]): The filename to load data from, whose suffix should
 
         <p><code>jobman</code> is a job management package designed to submit and monitor jobs on remote machines. It is built on the top of the <a href="https://docs.deepmodeling.com/projects/dpdispatcher">dpdispatcher</a> package.</p>
 <p><code>jobman</code> is designed for the big data era, where the number of remoted jobs is large that handling them manually is almost impossible. Imaging that you have more than 1000 jobs to run, you have access to 3 remote high-performance computing (HPC) serves with different computing environment, and you need to monitor the progress of each job, check the output files, and download the results. This is a tedious and time-consuming task. The <code>jobman</code> package is designed to automate such tasks. <code>jobman</code> will handle the input files, submit the jobs to remote machines, monitor the progress of each job, and download the results to the local machine whenever jobs finished.</p>
-<p>Setting remote machines follow the <a href="https://thangckt.github.io/thutil_doc/schema_doc/config_remote_machine/">remote machine schema</a>.</p>
 <p>Case 1: Distribute jobs to single remote machines</p>
 <p>This is used for general purpose, which can define the task_list flexibly where each task can have different command_list, forward_files, backward_files. Just need to:</p>
 <ul>
@@ -3286,6 +3285,14 @@ filename (Union[str, Path]): The filename to load data from, whose suffix should
 <a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="p">)</span>
 </code></pre></div>
 
+
+<details class="note" open>
+  <summary>Note</summary>
+  <ul>
+<li>Setting remote machines follow the <a href="https://thangckt.github.io/thutil_doc/schema_doc/config_remote_machine/">remote machine schema</a>.</li>
+<li>Can import from <code>jobman</code> these classes: <a href="https://docs.deepmodeling.com/projects/dpdispatcher/en/latest/task.html">Task</a>, <a href="https://docs.deepmodeling.com/projects/dpdispatcher/en/latest/machine.html">Machine</a>, <a href="https://docs.deepmodeling.com/projects/dpdispatcher/en/latest/resources.html">Resources</a>, <a href="https://docs.deepmodeling.com/projects/dpdispatcher/en/latest/api/dpdispatcher.html#dpdispatcher.Submission">Submission</a>.</li>
+</ul>
+</details>
 
 
 
