@@ -3943,10 +3943,10 @@ Args:
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            scan_dirs(dirs: list[str], with_files: list[str], without_files: list[str] = []) -> list[str] (thutil.path.scan_dirs)" href="#thutil.path.scan_dirs">scan_dirs</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="            scan_dirs(dirs: list[str], with_files: list[str] = [], without_files: list[str] = []) -> list[str] (thutil.path.scan_dirs)" href="#thutil.path.scan_dirs">scan_dirs</a></code></b>
             –
             <div class="doc-md-description">
-              <p>Check if the folders contains and not contains some files.</p>
+              <p>Return directories containing all <code>with_files</code> and none of <code>without_files</code>.</p>
             </div>
           </li>
     </ul>
@@ -4283,14 +4283,14 @@ patterns : list[str]
 
 
 <h4 id="thutil.path.scan_dirs" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">scan_dirs</span><span class="p">(</span><span class="n">dirs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">with_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">without_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[])</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">scan_dirs</span><span class="p">(</span><span class="n">dirs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">with_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">without_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[])</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
 
 <a href="#thutil.path.scan_dirs" class="headerlink" title="Permanent link">&para;</a></h4>
 
 
     <div class="doc doc-contents ">
 
-        <p>Check if the folders contains and not contains some files.</p>
+        <p>Return directories containing all <code>with_files</code> and none of <code>without_files</code>.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -4300,15 +4300,17 @@ patterns : list[str]
               (<code><span title="list">list</span>[<span title="str">str</span>]</code>)
           –
           <div class="doc-md-description">
-            <p>The paths of dirs to scan.</p>
+            <p>List of directory paths to scan.</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
             <b><code>with_files</code></b>
-              (<code><span title="list">list</span>[<span title="str">str</span>]</code>)
+              (<code><span title="list">list</span>[<span title="str">str</span>]</code>, default:
+                  <code>[]</code>
+)
           –
           <div class="doc-md-description">
-            <p>The files that should exist in the path.</p>
+            <p>Files that must exist in the directory. Defaults to [].</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
@@ -4318,7 +4320,7 @@ patterns : list[str]
 )
           –
           <div class="doc-md-description">
-            <p>The files that should not exist in the work_dir. Defaults to [].</p>
+            <p>Files that must not exist in the directory. Defaults to [].</p>
           </div>
         </li>
     </ul>
@@ -4330,7 +4332,7 @@ patterns : list[str]
               <code><span title="list">list</span>[<span title="str">str</span>]</code>
           –
           <div class="doc-md-description">
-            <p>list[str]: The paths that meet the conditions.</p>
+            <p>List of directory paths meeting the conditions.</p>
           </div>
         </li>
     </ul>
