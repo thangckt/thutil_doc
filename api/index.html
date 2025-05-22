@@ -1487,36 +1487,36 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#thutil.sth2sth.file2str" class="md-nav__link">
+  <a href="#thutil.sth2sth.txt2str" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;file2str
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;txt2str
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#thutil.sth2sth.str2file" class="md-nav__link">
+  <a href="#thutil.sth2sth.str2txt" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;str2file
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;str2txt
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#thutil.sth2sth.file2list" class="md-nav__link">
+  <a href="#thutil.sth2sth.txt2list" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;file2list
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;txt2list
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#thutil.sth2sth.list2file" class="md-nav__link">
+  <a href="#thutil.sth2sth.list2txt" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;list2file
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;list2txt
     </span>
   </a>
   
@@ -2449,36 +2449,36 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#thutil.sth2sth.file2str" class="md-nav__link">
+  <a href="#thutil.sth2sth.txt2str" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;file2str
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;txt2str
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#thutil.sth2sth.str2file" class="md-nav__link">
+  <a href="#thutil.sth2sth.str2txt" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;str2file
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;str2txt
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#thutil.sth2sth.file2list" class="md-nav__link">
+  <a href="#thutil.sth2sth.txt2list" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;file2list
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;txt2list
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#thutil.sth2sth.list2file" class="md-nav__link">
+  <a href="#thutil.sth2sth.list2txt" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;list2file
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;list2txt
     </span>
   </a>
   
@@ -3944,10 +3944,10 @@ Args:
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            scan_dirs(dirs: list[str], with_files: list[str] = [], without_files: list[str] = []) -> list[str] (thutil.path.scan_dirs)" href="#thutil.path.scan_dirs">scan_dirs</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="            scan_dirs(dirs: list[str], with_files: list[str] = None, without_files: list[str] = None) -> list[str] (thutil.path.scan_dirs)" href="#thutil.path.scan_dirs">scan_dirs</a></code></b>
             –
             <div class="doc-md-description">
-              <p>Return directories containing all <code>with_files</code> and none of <code>without_files</code>.</p>
+              <p>Return directories containing <code>with_files</code> and none of <code>without_files</code>.</p>
             </div>
           </li>
     </ul>
@@ -4284,14 +4284,14 @@ patterns : list[str]
 
 
 <h4 id="thutil.path.scan_dirs" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">scan_dirs</span><span class="p">(</span><span class="n">dirs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">with_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">without_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[])</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">scan_dirs</span><span class="p">(</span><span class="n">dirs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">with_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">without_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
 
 <a href="#thutil.path.scan_dirs" class="headerlink" title="Permanent link">&para;</a></h4>
 
 
     <div class="doc doc-contents ">
 
-        <p>Return directories containing all <code>with_files</code> and none of <code>without_files</code>.</p>
+        <p>Return directories containing <code>with_files</code> and none of <code>without_files</code>.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -4307,7 +4307,7 @@ patterns : list[str]
         <li class="doc-section-item field-body">
             <b><code>with_files</code></b>
               (<code><span title="list">list</span>[<span title="str">str</span>]</code>, default:
-                  <code>[]</code>
+                  <code>None</code>
 )
           –
           <div class="doc-md-description">
@@ -4317,7 +4317,7 @@ patterns : list[str]
         <li class="doc-section-item field-body">
             <b><code>without_files</code></b>
               (<code><span title="list">list</span>[<span title="str">str</span>]</code>, default:
-                  <code>[]</code>
+                  <code>None</code>
 )
           –
           <div class="doc-md-description">
@@ -4553,28 +4553,28 @@ patterns : list[str]
 <p><span class="doc-section-title">Functions:</span></p>
     <ul>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            file2str(file_path: Union[str, Path]) -> str (thutil.sth2sth.file2str)" href="#thutil.sth2sth.file2str">file2str</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="            txt2str(file_path: Union[str, Path]) -> str (thutil.sth2sth.txt2str)" href="#thutil.sth2sth.txt2str">txt2str</a></code></b>
             –
             <div class="doc-md-description">
               
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            str2file(text: str, file_path: Union[str, Path]) -> None (thutil.sth2sth.str2file)" href="#thutil.sth2sth.str2file">str2file</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="            str2txt(text: str, file_path: Union[str, Path]) -> None (thutil.sth2sth.str2txt)" href="#thutil.sth2sth.str2txt">str2txt</a></code></b>
             –
             <div class="doc-md-description">
               
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            file2list(file_path: Union[str, Path]) -> list[str] (thutil.sth2sth.file2list)" href="#thutil.sth2sth.file2list">file2list</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="            txt2list(file_path: Union[str, Path]) -> list[str] (thutil.sth2sth.txt2list)" href="#thutil.sth2sth.txt2list">txt2list</a></code></b>
             –
             <div class="doc-md-description">
               
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            list2file(text_list: list, file_path: Union[str, Path]) -> None (thutil.sth2sth.list2file)" href="#thutil.sth2sth.list2file">list2file</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="            list2txt(text_list: list, file_path: Union[str, Path]) -> None (thutil.sth2sth.list2txt)" href="#thutil.sth2sth.list2txt">list2txt</a></code></b>
             –
             <div class="doc-md-description">
               
@@ -4606,26 +4606,10 @@ patterns : list[str]
 <div class="doc doc-object doc-function">
 
 
-<h4 id="thutil.sth2sth.file2str" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">file2str</span><span class="p">(</span><span class="n">file_path</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span></code>
+<h4 id="thutil.sth2sth.txt2str" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">txt2str</span><span class="p">(</span><span class="n">file_path</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span></code>
 
-<a href="#thutil.sth2sth.file2str" class="headerlink" title="Permanent link">&para;</a></h4>
-
-
-    <div class="doc doc-contents ">
-
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-<h4 id="thutil.sth2sth.str2file" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">str2file</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">file_path</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span></code>
-
-<a href="#thutil.sth2sth.str2file" class="headerlink" title="Permanent link">&para;</a></h4>
+<a href="#thutil.sth2sth.txt2str" class="headerlink" title="Permanent link">&para;</a></h4>
 
 
     <div class="doc doc-contents ">
@@ -4638,10 +4622,10 @@ patterns : list[str]
 <div class="doc doc-object doc-function">
 
 
-<h4 id="thutil.sth2sth.file2list" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">file2list</span><span class="p">(</span><span class="n">file_path</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
+<h4 id="thutil.sth2sth.str2txt" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">str2txt</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">file_path</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span></code>
 
-<a href="#thutil.sth2sth.file2list" class="headerlink" title="Permanent link">&para;</a></h4>
+<a href="#thutil.sth2sth.str2txt" class="headerlink" title="Permanent link">&para;</a></h4>
 
 
     <div class="doc doc-contents ">
@@ -4654,10 +4638,26 @@ patterns : list[str]
 <div class="doc doc-object doc-function">
 
 
-<h4 id="thutil.sth2sth.list2file" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">list2file</span><span class="p">(</span><span class="n">text_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">file_path</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span></code>
+<h4 id="thutil.sth2sth.txt2list" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">txt2list</span><span class="p">(</span><span class="n">file_path</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
 
-<a href="#thutil.sth2sth.list2file" class="headerlink" title="Permanent link">&para;</a></h4>
+<a href="#thutil.sth2sth.txt2list" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thutil.sth2sth.list2txt" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">list2txt</span><span class="p">(</span><span class="n">text_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">file_path</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span></code>
+
+<a href="#thutil.sth2sth.list2txt" class="headerlink" title="Permanent link">&para;</a></h4>
 
 
     <div class="doc doc-contents ">
