@@ -26,12 +26,12 @@ def append_example_config(yaml_config_file: str, text_file: str):
 def main():
     ### Append schema to the .md files
     append_schema_text(
-        yaml_schema_file="./thutil/schema/schema_arg_remote_machine.yml",
+        yaml_schema_file="./thkit/schema/schema_arg_remote_machine.yml",
         text_file="./_docs/schema_doc/config_remote_machine.md",
     )
     ### Append example configuration to the .md files
     append_example_config(
-        yaml_config_file="./thutil/schema/example_machine_config.yml",
+        yaml_config_file="./thkit/schema/example_machine_config.yml",
         text_file="./_docs/schema_doc/config_remote_machine.md",
     )
     return
